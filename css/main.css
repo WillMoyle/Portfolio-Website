@@ -71,9 +71,16 @@ body {
     left: 0px;
     right: 0px;
     overflow: auto;
+    letter-spacing: 1px;
+    line-height: 150%;
 }
 
 #main p {
+    margin: 2em;
+}
+
+#main h2 {
+    margin-left: 0;
     margin: 2em;
 }
 
