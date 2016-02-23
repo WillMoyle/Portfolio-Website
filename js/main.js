@@ -1,13 +1,16 @@
 var showPortfolio = function() {
-    $("#projects").slideDown();
+    var portLinkPos = $("#port_link").position();
+    $("#projects").css({"left":portLinkPos.left, "top":"6em", "height":"auto"});
+    $("#projects").stop().slideDown();
 }
 
 var hidePortfolio = function() {
-    $("#projects").slideUp();
+    $("#projects").stop().slideUp();
 }
 
 var main = function() {
     $("#projects").hide();
+    $("#projects").css("visibility", "visible");
     var portLinkPos = $("#port_link").position();
     $("#projects").css({"left":portLinkPos.left, "top":"6em"});
 }

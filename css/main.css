@@ -68,8 +68,10 @@ body {
     color: white;
     background-color: #05345C;
     list-style-type: none;
-    display: inline;
+    display: block;
     z-index: 20;
+    visibility: hidden;
+    padding: 0.5em;
 }
 
 #projects li {
