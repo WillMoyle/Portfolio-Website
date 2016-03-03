@@ -14,6 +14,22 @@ var toggle_portfolio = function() {
     portfolio_visible = !portfolio_visible;
 }
 
+var blog_visible = false;
+
+var toggle_blog = function() {
+    if (blog_visible) {
+        $('#blog_link .fa').removeClass('fa-chevron-down');
+        $('#blog_link .fa').addClass('fa-chevron-right');
+        $('.blog').stop().slideUp();
+    }
+    else {
+        $('#blog_link .fa').removeClass('fa-chevron-right');
+        $('#blog_link .fa').addClass('fa-chevron-down');
+        $('.blog').stop().slideDown();
+    }
+    blog_visible = !blog_visible;
+}
+
 var menu_visible = false;
 
 var show_menu = function() {
@@ -56,10 +72,10 @@ var main = function() {
         }
     }
     
-    $('.project').toggle();
+    $('.project, .blog').toggle();
     $('.icon-menu, .icon-close').click(toggle_menu);
     $('#port_link').click(toggle_portfolio);
-    
+    $('#blog_link').click(toggle_blog);
 }
 
 if ($('header').scrollLeft() != 0) {
