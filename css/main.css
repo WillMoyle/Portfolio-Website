@@ -1,198 +1,166 @@
 body {
     font-family: 'Raleway', sans-serif;
-    height: 100%;
+    /*left: 0;*/
+    margin: 0;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.full {
     width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* ---------- MENU ---------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+.menu {
+    background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+    left: -285px;  /* start off behind the scenes */
+    height: 100%;
+    position: fixed;
+    width: 285px;
+    z-index: 30;
+}
+
+.menu ul {
+    border-top: 1px solid #636366;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #636366;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 45px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-top: 3px;
+    
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #CCCCCC;
+}
+
+.project li {
+    text-transform: none;
+    padding-left: 50px;
+}
+
+.menu a {
+    color: #fff;
+}
+
+.icon-close {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 /* -------------------------------------------------------------------------- */
 /* ---------- HEADER -------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-#header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 7em;
-    overflow: hidden;
-}
-
-#title {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    height: 3em;
-    overflow: hidden;
-    
-    background-color: white;
-    color: #00014F;
-    text-align: center;
-    vertical-align: center;
-}
-
-#nav {
-    position: absolute;
-    top: 3em;
-    left: 0px;
-    right: 0px;
-    height: 2em;
-    overflow: hidden;
-    
-    background-color: #1E0566;
-    width: 100%;
-    text-align: center;
-    padding: 1em;
-}
-
-#nav li {
-    display: inline;
-    padding: 0.5em;
-}
-
-#header a {
-    color: white;
-    text-decoration: none;
-}
-
-#header a:hover {
-    text-decoration: underline;
-}
-
-#header .current {
-    color: #CCCCCC;
-}
-
-#projects {
+header {
     position: fixed;
-    color: white;
-    background-color: #05345C;
-    list-style-type: none;
-    display: block;
+    height: 3em;
+    background-color: #00014F;
     z-index: 20;
-    visibility: hidden;
-    padding: 0.5em;
+    color: white;
 }
 
-#projects li {
-    padding: 0.5em;
+header .side {
+    font-size: 1em;
+    width: 30%;
+    text-align: left;
+    padding-left: 3%;
+    display: inline-block;
 }
 
+.icon-menu {
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.icon-menu i {
+    margin-right: 5px;
+}
+
+header .center {
+    width: 40%;
+    text-align: center;
+    display: inline-block;
+}
+
+header h1 {
+    margin: 0;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    
+}
+
+.behind {
+    height: 5em;
+}
 
 /* -------------------------------------------------------------------------- */
-/* ---------- MAIN BODY ----------------------------------------------------- */
+/* ---------- BODY ---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-#about {
-    position: absolute;
-    top: 7em;
-    bottom: 3em;
-    left: 0px;
-    right: 0px;
-    overflow: auto;
-    letter-spacing: 1px;
-    line-height: 150%;
+.about p {
+    margin-bottom: 2em;
+    font-size: 1.1em;
+    letter-spacing: 110%;
+    line-height: 130%;
 }
 
-#about p {
-    margin: 2em;
-}
-
-#about h2 {
+.about h2 {
     margin-left: 0;
     margin: 2em;
 }
 
-#main a, #about a {
+.about a {
     color: black;
     text-decoration: underline;
 }
-
-#main a:hover, #about a:hover {
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.odd_pic {
-    float: left;
-    max-width: 40%;
-    margin: 2em;
-}
-
-.even_pic {
-    float: right;
-    max-width: 40%;
-    margin: 2em;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    clear: both;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-
-#main {
-    top: 7em;
-    bottom: 3em;
-    position: absolute;
-    clear: both;
-    display: inline-block;
-    overflow: auto;
-}
-
-.portfolio_pic {
-    width: 20%;
-    float: left;
-    margin: 5%;
-}
-
-.project {
-    width: 60%;
-    float: right;
-    margin: 5%;
-    margin-top: 2em;
-    padding-top: 0;
-}
-
-
-
-
 
 /* -------------------------------------------------------------------------- */
 /* ---------- FOOTER -------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-#footer {
-    position:absolute;
-    left:0px;
-    right:0px;
-    bottom:0px;
-    height: 3em;
-    overflow: hidden;
+footer {
+    position: fixed;
+    bottom: 0px;
+    height: 2.5em;
+    padding-top: 0.5em;
     
     background-color: #05345C;
     color: white;
+    font-size: 1em;
+}
+
+footer div {
+    display: inline-block;
     text-align: center;
+    width: 32%;
 }
 
-#footer li {
-    display: inline;
-    padding: 0.5em;
-    margin: 0.5em;
-}
-
-#footer a {
+footer a {
     color: white;
     text-decoration: none;
 }
 
-#footer a:hover {
+footer a:hover {
+    color: white;
     text-decoration: underline;
-}
-
-/* IE 6 */
-* html #footer {
-    position:absolute;
-    top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
 }
