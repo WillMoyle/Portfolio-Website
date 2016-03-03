@@ -1,116 +1,236 @@
+<!-- WILL MOYLE website - PORTFOLIO -->
+
 <!DOCTYPE html>
 
 <html>
     
     <head>
-         <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <link rel='stylesheet' href='../css/main.css'/>
-        <title>Will Moyle - Portfolio</title>
+        <title>Will Moyle</title>
     </head>
-    
     <body>
         
-        <div id="header">
-            <h1 id="title">Will Moyle</h1>
-            <ul id="nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li id="port_link" class="current">Portfolio</li>
-            </ul>
-            <ul id="projects">
-                <li><a href="portfolio.html#mind">Mind Explorer iPad App</a></li>
-                <li><a href="portfolio.html#vr">Embodied Virtual Reality</a></li>
-                <li><a href="portfolio.html#blackjack">Blackjack Odds</a></li>
-                <li><a href="portfolio.html#monty">Monty Hall Problem</a></li>
-            </ul>
-        </div>
+        <!-- MENU BAR -->
         
-        
-        
-        <div id="main">
-            
-            <img class="portfolio_pic" src="../img/mind.png"/>
-            
-            <div class="project" id="mind">
-                <h2>MIND EXPLORER</h2>
-                <p>MSc Individual Project - Demonstration iPad App for Spatial Indexing in Neuroscience:</p>
-                <p>Built from the ground-up, an <strong>iPad app</strong> to visualise a 3D neocortex model to allow for quick, efficient ad-hoc analysis.</p>
-                <p>Written using <strong>Swift</strong> and <strong>Metal</strong> (the latest iOS programming languages, replacements for Objective-C and Open GL ES, respectively) as well as <strong>C++</strong>.</p>
-                <p>Users can view and manipulate the 3D neocortex model using standard touch screen gestures to translate, rotate and zoom.</p>
-                <p>After defining a range query on the model, the app uses the sophisticated FLAT spatial indexing algorithm to render the portion of the model as a highly detailed triangular mesh.</p>
-                <p>Using a novel graph algorithm, the app allows users to visualise messages propagating throughout the neural network.</p>
-                <p>Mind Explorer is now in use among the Neuroscience department of Imperial College, London.</p>
-                <p>For the elements of the source code (aside from the proprietary underlying dataset), visit <a href="https://github.com/WillMoyle/Mind-Explorer" target="_blank">GitHub</a>.</p>
-                <p>To view a video demonstration of the app, visit <a href="https://youtu.be/coGSApU8ebE" target="_blank">YouTube</a>.</p>
-            </div>
-            
-            <hr id="vr">
-            
-            <img class="portfolio_pic" src="../img/vr.jpg"/>
-            
-            <div class="project">
-                <h2>EMBODIED VIRTUAL REALITY FOR THE OCULUS RIFT</h2>
-                <p>MSc Group Project:</p>
-                <p>This MSc Group Project involved the development of a system for the veridical representation of a user's hands and limbs in a <strong>virtual reality</strong> environment using motion tracking.</p>
-                <p>Developed novel solutions for interprocess communication between different hardware systems.</p>
-                <p>Built using <strong>C++</strong>, <strong>OpenGL</strong> and the <strong>Oculus Rift</strong> development environment.</p>
-                <p>Worked as a team using an agile methodology for development.</p>
-                <p>For a video demo, head over to <a href="https://youtu.be/-db7dQuanK0" target="_blank">YouTube</a>.</p>
-            </div>
-            
-            <hr>
-            
-            <img class="portfolio_pic" src="../img/cards.png"/>
-            
-            <div class="project" id="blackjack">
-                <h2>BLACKJACK ODDS</h2>
-                <p>This command line program, written in <strong>Python</strong>, allows the user to either:</p>
-                <ul>
-                    <li><strong>play a game of blackjack against the computer</strong>, choosing when to stick or hit manually</li>
-                    <li>choose a strategy for the player and <strong>automatically run a given number of games and analyse the results</strong></li>
-                </ul>
-                <p>The user is asked:</p>
-                <ul>
-                    <li>What is their strategy. Can be either "Manual", "Soft 16-18" or "Hard 16-18" (e.g. input "Soft 16")</li>
-                    <li>How much the user wants to bet each hand</li>
-                    <li>What the multiplier for blackjack wins is (e.g. 1.5)</li>
-                    <li>Whether the dealer should stand on a soft 17 or hard 17 (varies by casino)</li>
-                    <li>If the user's strategy is not "Manual" then the user inputs how many hands they wish to play and whether they want to see details of each hand</li>
-                </ul>
-                <p>At the end, the program outputs the total number of wins, losses, draws and blackjack wins, along with the win rate (as a percentage) and the total monetary winnings or losses.</p>
-                <p>The program can also be used to run a large number of games across a variety of strategies and analyse the results.</p>
-                <p>The source code for this project can be found on <a href="https://github.com/WillMoyle/Blackjack" target="_blank">GitHub</a>.</p>
-            </div>
-            
-            <hr>
-            
-            <img class="portfolio_pic" src="../img/monty.png"/>
-            
-            <div class="project" id="monty">
-                <h2>THE MONTY HALL PROBLEM</h2>
-                <p>I wrote this <strong>Python</strong> console application to explore the <strong>probability</strong> behind the so called Monty Hall problem (<a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank">ref</a>). There are a set number of doors. Behind one is a prize. The player selects one door. The computer then randomly opens a given number of doors. The player can then choose to switch to the other unopened door or stick with their initial choice. Probability dictates that the player should always switch, this program verifies that.</p>
-                <p>The user can input the number of doors, the number of doors that the computer opens and the number of rounds that can be played. The user then decides if the game should be played automatically or manually. If the game is played automatically, the user is then asked whether the computer should always switch or always stick.</p>
-                <p>According to D. L. Ferguson (1975 in a letter to Selvin cited in (Selvin 1975b)), given an N-door problem, with the computer opening P wrong doors, the probability of winning if the user switches is:</p>
-                <p>(N - 1) / (N(N-P-1))</p>
-                <p>This formula is tested if the game is played automatically.</p>
-                <p>The source code for this project can be found at <a href="https://github.com/WillMoyle/Monty-Hall-Problem" target="_blank">GitHub</a>.</p>
-            </div>
-            
-        </div>
-        
-        
-        
-        <div id="footer">
+        <div class="menu">
+            <div class="icon-close">
+                <img src="../img/close_icon.png">
+                    </div>
             <ul>
-                <li><a href="https://uk.linkedin.com/in/willmoyle" target="_blank">LINKEDIN</a></li>
-                <li><a href="https://github.com/willmoyle" target="_blank">GITHUB</a></li>
-                <li><a href="../resources/Will Moyle - Resume.pdf" target="_blank">RESUME</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Me</a></li>
+                <li id="port_link"><i class="fa fa-chevron-right"></i>   Portfolio</li>
+                <ul class="project">
+                    <li><a href="./portfolio.html#mind">Mind Explorer iPad App</a></li>
+                    <li><a href="./portfolio.html#vr">Embodied Virtual Reality</a></li>
+                    <li><a href="./portfolio.html#website">Portfolio Website</a></li>
+                    <li><a href="./portfolio.html#blackjack">Blackjack Odds</a></li>
+                    <li><a href="./portfolio.html#monty">Monty Hall Problem</a></li>
+                </ul>
             </ul>
         </div>
+        
+        <!-- HEADER -->
+        
+        <header class="container full">
+            <div class="side icon-menu">
+                <i class="fa fa-bars"></i>
+                Menu
+            </div>
+            <div class="center"><h1>Will Moyle</h1></div>
+        </header>
+        
+        <div class="container behind"></div>
+        
+        <!-- MAIN BODY -->
+        
+        <section class="container about">
+            <div class="row" id="mind">
+                <div class="col-sm-4">
+                    <img class="main_pic" src="../img/mind.png"/>
+                </div>
+                
+                <div class="col-sm-8">
+                    <h2>MIND EXPLORER</h2>
+                    <p>MSc Individual Project - Demonstration iPad App for Spatial Indexing in Neuroscience:</p>
+                    <p>Built from the ground-up, an <strong>iPad app</strong> to visualise a 3D neocortex model to allow for quick, efficient ad-hoc analysis.</p>
+                    <p>Written using <strong>Swift</strong> and <strong>Metal</strong> (the latest iOS programming languages, replacements for Objective-C and Open GL ES, respectively) as well as <strong>C++</strong>.</p>
+                    <p>Users can view and manipulate the 3D neocortex model using standard touch screen gestures to translate, rotate and zoom.</p>
+                    <p>After defining a range query on the model, the app uses the sophisticated FLAT spatial indexing algorithm to render the portion of the model as a highly detailed triangular mesh.</p>
+                    <p>Using a novel graph algorithm, the app allows users to visualise messages propagating throughout the neural network.</p>
+                    <p>Mind Explorer is now in use among the Neuroscience department of Imperial College, London.</p>
+                    <p>For the elements of the source code (aside from the proprietary underlying dataset), visit <a href="https://github.com/WillMoyle/Mind-Explorer" target="_blank">GitHub</a>.</p>
+                    <p>To view a video demonstration of the app, visit <a href="https://youtu.be/coGSApU8ebE" target="_blank">YouTube</a>.</p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row" id="vr">
+                <div class="col-sm-4">
+                    <img class="main_pic" src="../img/vr.jpg"/>
+                </div>
+                
+                <div class="col-sm-8">
+                    <h2>EMBODIED VIRTUAL REALITY FOR THE OCULUS RIFT</h2>
+                    <p>MSc Group Project:</p>
+                    <p>This MSc Group Project involved the development of a system for the veridical representation of a user's hands and limbs in a <strong>virtual reality</strong> environment using motion tracking.</p>
+                    <p>Developed novel solutions for interprocess communication between different hardware systems.</p>
+                    <p>Built using <strong>C++</strong>, <strong>OpenGL</strong> and the <strong>Oculus Rift</strong> development environment.</p>
+                    <p>Worked as a team using an agile methodology for development.</p>
+                    <p>For a video demo, head over to <a href="https://youtu.be/-db7dQuanK0" target="_blank">YouTube</a>.</p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row" id="website">
+                <div class="col-sm-4">
+                    <img class="main_pic" src="../img/web.jpg"/>
+                </div>
+                
+                <div class="col-sm-8">
+                    <h2>PORFOLIO WEBSITE</h2>
+                    <p>Through the use of books online resourses, I built the website WillMoyle.net from the ground up. I wrote all of the code in <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> and <strong>JQuery</strong>.</p>
+                    <p>The site makes use of <strong>interactive features</strong> (such as the expanding menu bar) and has been tested on a wide variety of browsers and devices. The format changes, with stacking columns, to allow for a <strong>mobile-friendly version</strong> for smart phones and smaller tablets.</p>
+                    <p>The code for the website can be found at <a href="https://github.com/WillMoyle/Portfolio-Website" target="_blank">GitHub</a>.</p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row" id="blackjack">
+                <div class="col-sm-4">
+                    <img class="main_pic" src="../img/cards.png"/>
+                </div>
+                
+                <div class="col-sm-8">
+                    <h2>BLACKJACK ODDS</h2>
+                    <p>This command line program, written in <strong>Python</strong>, allows the user to either:</p>
+                    <ul>
+                        <li><strong>play a game of blackjack against the computer</strong>, choosing when to stick or hit manually</li>
+                        <li>choose a strategy for the player and <strong>automatically run a given number of games and analyse the results</strong></li>
+                    </ul>
+                    <p>The user is asked:</p>
+                    <ul>
+                        <li>What is their strategy. Can be either "Manual", "Soft 16-18" or "Hard 16-18" (e.g. input "Soft 16")</li>
+                        <li>How much the user wants to bet each hand</li>
+                        <li>What the multiplier for blackjack wins is (e.g. 1.5)</li>
+                        <li>Whether the dealer should stand on a soft 17 or hard 17 (varies by casino)</li>
+                        <li>If the user's strategy is not "Manual" then the user inputs how many hands they wish to play and whether they want to see details of each hand</li>
+                    </ul>
+                    <p>At the end, the program outputs the total number of wins, losses, draws and blackjack wins, along with the win rate (as a percentage) and the total monetary winnings or losses.</p>
+                    <p>The program can also be used to run a large number of games across a variety of strategies and analyse the results.</p>
+                    <p>The source code for this project can be found on <a href="https://github.com/WillMoyle/Blackjack" target="_blank">GitHub</a>.</p>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <div class="row" id="monty">
+                <div class="col-sm-4">
+                    <img class="main_pic" src="../img/monty.png"/>
+                </div>
+                
+                <div class="col-sm-8">
+                    <h2>THE MONTY HALL PROBLEM</h2>
+                    <p>I wrote this <strong>Python</strong> console application to explore the <strong>probability</strong> behind the so called Monty Hall problem (<a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank">ref</a>). There are a set number of doors. Behind one is a prize. The player selects one door. The computer then randomly opens a given number of doors. The player can then choose to switch to the other unopened door or stick with their initial choice. Probability dictates that the player should always switch, this program verifies that.</p>
+                    <p>The user can input the number of doors, the number of doors that the computer opens and the number of rounds that can be played. The user then decides if the game should be played automatically or manually. If the game is played automatically, the user is then asked whether the computer should always switch or always stick.</p>
+                    <p>According to D. L. Ferguson (1975 in a letter to Selvin cited in (Selvin 1975b)), given an N-door problem, with the computer opening P wrong doors, the probability of winning if the user switches is:</p>
+                    <p>(N - 1) / (N(N-P-1))</p>
+                    <p>This formula is tested if the game is played automatically.</p>
+                    <p>The source code for this project can be found at <a href="https://github.com/WillMoyle/Monty-Hall-Problem" target="_blank">GitHub</a>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOOTER -->
+        
+        <div class="container behind"></div>
+        
+        <footer class="container full">
+            <div><a href="https://uk.linkedin.com/in/willmoyle" target="_blank">LINKEDIN</a></div>
+            <div><a href="https://github.com/willmoyle" target="_blank">GITHUB</a></div>
+            <div><a href="resources/Will Moyle - Resume.pdf" target="_blank">RESUME</a></div>
+        </footer>
+        
+        <!-- SCRIPTS -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="../js/main.js"></script>
         
     </body>
     
-    <script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
-    
 </html>
+
+<!--
+ 
+ <!DOCTYPE html>
+ 
+ <html>
+ 
+ <head>
+ <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+ <link rel='stylesheet' href='../css/main.css'/>
+ <title>Will Moyle - Portfolio</title>
+ </head>
+ 
+ <body>
+ 
+ <div id="header">
+ <h1 id="title">Will Moyle</h1>
+ <ul id="nav">
+ <li><a href="../index.html">Home</a></li>
+ <li><a href="about.html">About Me</a></li>
+ <li id="port_link" class="current">Portfolio</li>
+ </ul>
+ <ul id="projects">
+ <li><a href="portfolio.html#mind">Mind Explorer iPad App</a></li>
+ <li><a href="portfolio.html#vr">Embodied Virtual Reality</a></li>
+ <li><a href="portfolio.html#blackjack">Blackjack Odds</a></li>
+ <li><a href="portfolio.html#monty">Monty Hall Problem</a></li>
+ </ul>
+ </div>
+ 
+ 
+ 
+ <div id="main">
+ 
+ 
+ 
+ 
+ <hr>
+ 
+ <img class="portfolio_pic" src="../img/monty.png"/>
+ 
+ <div class="project" id="monty">
+ <h2>THE MONTY HALL PROBLEM</h2>
+ <p>I wrote this <strong>Python</strong> console application to explore the <strong>probability</strong> behind the so called Monty Hall problem (<a href="https://en.wikipedia.org/wiki/Monty_Hall_problem" target="_blank">ref</a>). There are a set number of doors. Behind one is a prize. The player selects one door. The computer then randomly opens a given number of doors. The player can then choose to switch to the other unopened door or stick with their initial choice. Probability dictates that the player should always switch, this program verifies that.</p>
+ <p>The user can input the number of doors, the number of doors that the computer opens and the number of rounds that can be played. The user then decides if the game should be played automatically or manually. If the game is played automatically, the user is then asked whether the computer should always switch or always stick.</p>
+ <p>According to D. L. Ferguson (1975 in a letter to Selvin cited in (Selvin 1975b)), given an N-door problem, with the computer opening P wrong doors, the probability of winning if the user switches is:</p>
+ <p>(N - 1) / (N(N-P-1))</p>
+ <p>This formula is tested if the game is played automatically.</p>
+ <p>The source code for this project can be found at <a href="https://github.com/WillMoyle/Monty-Hall-Problem" target="_blank">GitHub</a>.</p>
+ </div>
+ 
+ </div>
+ 
+ 
+ 
+ <div id="footer">
+ <ul>
+ <li><a href="https://uk.linkedin.com/in/willmoyle" target="_blank">LINKEDIN</a></li>
+ <li><a href="https://github.com/willmoyle" target="_blank">GITHUB</a></li>
+ <li><a href="../resources/Will Moyle - Resume.pdf" target="_blank">RESUME</a></li>
+ </ul>
+ </div>
+ 
+ </body>
+ 
+ <script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
+ <script src="../js/main.js"></script>
+ 
+ </html> -->

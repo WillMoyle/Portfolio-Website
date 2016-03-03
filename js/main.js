@@ -55,7 +55,7 @@ var main = function() {
             $('footer').css('top', $(document).height());
         }
     }
-
+    
     $('.project').toggle();
     $('.icon-menu, .icon-close').click(toggle_menu);
     $('#port_link').click(toggle_portfolio);

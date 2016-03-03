@@ -1,16 +1,10 @@
 body {
     font-family: 'Raleway', sans-serif;
-    /*left: 0;*/
     margin: 0;
-    /*overflow: hidden;*/
     position: relative;
 }
 
 .full {
-    width: 100%;
-}
-
-img {
     width: 100%;
 }
 
@@ -20,7 +14,7 @@ img {
 
 .menu {
     background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-    left: -285px;  /* start off behind the scenes */
+    left: -285px;
     height: 100%;
     position: fixed;
     width: 285px;
@@ -137,9 +131,11 @@ header h1 {
     text-decoration: underline;
 }
 
-.about img {
+.main_pic {
+    float: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    width: 100%;
 }
 
 hr {
