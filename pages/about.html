@@ -1,82 +1,206 @@
+<!-- WILL MOYLE website - ABOUT ME -->
+
 <!DOCTYPE html>
 
 <html>
     
     <head>
-         <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <link rel='stylesheet' href='../css/main.css'/>
-        <title>Will Moyle - About Me</title>
+        <title>Will Moyle</title>
     </head>
-    
     <body>
         
-        <div id="header">
-            <h1 id="title">Will Moyle</h1>
-            <ul id="nav">
+        <!-- MENU BAR -->
+        
+        <div class="menu">
+            <div class="icon-close">
+                <img src="../img/close_icon.png">
+                    </div>
+            <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li class="current">About Me</li>
-                <li id="port_link"><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-            <ul id="projects">
-                <li><a href="portfolio.html#mind">Mind Explorer iPad App</a></li>
-                <li><a href="portfolio.html#vr">Embodied Virtual Reality</a></li>
-                <li><a href="portfolio.html#blackjack">Blackjack Odds</a></li>
-                <li><a href="portfolio.html#monty">Monty Hall Problem</a></li>
+                <li>About Me</li>
+                <li id="port_link"><i class="fa fa-chevron-right"></i><a href="./portfolio.html">   Portfolio</a></li>
+                <ul class="project">
+                    <li><a href="./portfolio.html#mind">Mind Explorer iPad App</a></li>
+                    <li><a href="./portfolio.html#vr">Embodied Virtual Reality</a></li>
+                    <li><a href="./portfolio.html#blackjack">Blackjack Odds</a></li>
+                    <li><a href="./portfolio.html#monty">Monty Hall Problem</a></li>
+                </ul>
             </ul>
         </div>
         
-        <div id="about">
-
-            <img class="odd_pic" src="../img/oxford.png"/>
-
-            <h2>UNDERGRADUATE STUDIES</h2>
-            
-            <p>In 2012, I graduated from the <strong>University of Oxford</strong> after completing a four-year undergraduate Masters degree in <strong>Mathematics</strong>. The degree was split into two parts. The first three years, for which I achieved a <strong>First</strong>, covered a wide range of topics (with a focus on <strong>Probability and Statistics</strong>). During my final Masters year, I specialised in Mathematical Physiology and Geoscience and achieved a 2.1 classification.</p>
-            
-            <hr>
-            
-            <img class="even_pic" src="../img/london.jpg"/>
-            
-            <h2>STARTING MY CAREER</h2>
-            
-            <p>After graduating, I joined Deloitte LLP as a <strong>Strategy Consultant</strong>. There, I gained a strong appreciation for the way in which statistical <strong>analysis</strong> (which I performed largely in Excel) can inform business decisions and shape our clients&#39; growth strategies. My work also had a highly qualitative side, including performing <strong>market research</strong>, interviewing senior clients and industry specialists and then distilling this information into meaningful insights, which we would then <strong>communicate to clients</strong>. This would take the form both of written documents (mostly using PowerPoint) and verbal <strong>presentations</strong>. My projects covered industries such as Media, Public Sector and Health Care and taught me how to work effectively as part of a <strong>team</strong>, including <strong>managing</strong> more junior members.</p>
-            
-            <hr>
-            
-            <img class="odd_pic" src="../img/robot.jpg"/>
-            
-            <h2>TRANSITIONING TO TECH</h2>
-            
-            <p>In 2014, I decided to pursue a more technical career, so I left Deloitte in order to undertake an <strong>MSc Computing Science</strong> degree from <strong>Imperial College, London</strong>. This course was largely based upon the <strong>C++</strong> and <strong>Python</strong> programming languages and allowed me to explore a wide variety of technical areas, including:</p>
-            
-            <ul>
-                <li><strong>Software Development</strong> and <strong>Object Oriented Programming</strong> (examples of some of the programs that I worked on can be found in my <a href="portfolio.html">Portfolio</a>)</li>
-                <li><strong>Databases</strong> - covering database design, SQL and Datalog</li>
-                <li><strong>Logic &amp; Artificial Intelligence</strong> - including natural language processing using Prolog</li>
-                <li><strong>Robotics</strong> - using Python to develop programs for a Lego Mindstorms and BrickPi robot (incorporating the SLAM localisation algorithm)</li>
-            </ul>
-            
-            <hr>
-            
-            <img class="even_pic" src="../img/ny.jpg"/>
-            
-            <h2>NOW</h2>
-            
-            <p>After achieving a high <strong>Distinction</strong> grade of 86% in my degree, I moved to New York along with my wife to begin a new chapter of my career, in which I hope to combine my technical, quantitative and qualitative skills in an exciting industry.</p>
-            
-
-        </div>
+        <!-- HEADER -->
         
-        <div id="footer">
-            <ul>
-                <li><a href="https://uk.linkedin.com/in/willmoyle" target="_blank">LINKEDIN</a></li>
-                <li><a href="https://github.com/willmoyle" target="_blank">GITHUB</a></li>
-                <li><a href="../resources/Will Moyle - Resume.pdf" target="_blank">RESUME</a></li>
-            </ul>
-        </div>
-
+        <header class="container full">
+            <div class="side icon-menu">
+                <i class="fa fa-bars"></i>
+                Menu
+            </div>
+            <div class="center"><h1>Will Moyle</h1></div>
+        </header>
+        
+        <div class="container behind"></div>
+        
+        <!-- MAIN BODY -->
+        
+        <section class="container about">
+            <div class="row">
+                <img class="col-sm-4" src="../img/oxford.png"/>
+                <div class="col-sm-8">
+                    <h2>UNDERGRADUATE STUDIES</h2>
+                    <p>In 2012, I graduated from the <strong>University of Oxford</strong> after completing a four-year undergraduate Masters degree in <strong>Mathematics</strong>. The degree was split into two parts. The first three years, for which I achieved a <strong>First</strong>, covered a wide range of topics (with a focus on <strong>Probability and Statistics</strong>). During my final Masters year, I specialised in Mathematical Physiology and Geoscience and achieved a 2.1 classification.</p>
+                </div>
+            </div>
+                
+                <hr>
+                
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>STARTING MY CAREER</h2>
+                    <p>After graduating, I joined Deloitte LLP as a <strong>Strategy Consultant</strong>. There, I gained a strong appreciation for the way in which statistical <strong>analysis</strong> (which I performed largely in Excel) can inform business decisions and shape our clients&#39; growth strategies. My work also had a highly qualitative side, including performing <strong>market research</strong>, interviewing senior clients and industry specialists and then distilling this information into meaningful insights, which we would then <strong>communicate to clients</strong>. This would take the form both of written documents (mostly using PowerPoint) and verbal <strong>presentations</strong>. My projects covered industries such as Media, Public Sector and Health Care and taught me how to work effectively as part of a <strong>team</strong>, including <strong>managing</strong> more junior members.</p>
+                </div>
+                <img class="col-sm-4" src="../img/london.jpg"/>
+            </div>
+            
+                <hr>
+                
+            <div class="row">
+                <img class="col-sm-4" src="../img/robot.jpg"/>
+                <div class="col-sm-8">
+                    <h2>TRANSITIONING TO TECH</h2>
+                    <p>In 2014, I decided to pursue a more technical career, so I left Deloitte in order to undertake an <strong>MSc Computing Science</strong> degree from <strong>Imperial College, London</strong>. This course was largely based upon the <strong>C++</strong> and <strong>Python</strong> programming languages and allowed me to explore a wide variety of technical areas, including:</p>
+                    <ul>
+                        <li><strong>Software Development</strong> and <strong>Object Oriented Programming</strong> (examples of some of the programs that I worked on can be found in my <a href="portfolio.html">Portfolio</a>)</li>
+                        <li><strong>Databases</strong> - covering database design, SQL and Datalog</li>
+                        <li><strong>Logic &amp; Artificial Intelligence</strong> - including natural language processing using Prolog</li>
+                        <li><strong>Robotics</strong> - using Python to develop programs for a Lego Mindstorms and BrickPi robot (incorporating the SLAM localisation algorithm)</li>
+                    </ul>
+                </div>
+            </div>
+                
+                <hr>
+                
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>NOW</h2>
+                    <p>After achieving a high <strong>Distinction</strong> grade of 86% in my degree, I moved to New York along with my wife to begin a new chapter of my career, in which I hope to combine my technical, quantitative and qualitative skills in an exciting industry.</p>
+                </div>
+                <img class="col-sm-4" src="../img/ny.jpg"/>
+            </div>
+                
+                
+                
+                
+                
+                
+            </div>
+            </div>
+        </section>
+        
+        <!-- FOOTER -->
+        
+        <div class="container behind"></div>
+        
+        <footer class="container full">
+            <div><a href="https://uk.linkedin.com/in/willmoyle" target="_blank">LINKEDIN</a></div>
+            <div><a href="https://github.com/willmoyle" target="_blank">GITHUB</a></div>
+            <div><a href="resources/Will Moyle - Resume.pdf" target="_blank">RESUME</a></div>
+        </footer>
+        
+        <!-- SCRIPTS -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="../js/main.js"></script>
+        
     </body>
-    <script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
-    <script src="../js/main.js"></script>
-
+    
 </html>
+
+
+
+<!--
+ <!DOCTYPE html>
+ 
+ <html>
+ 
+ <head>
+ <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+ <link rel='stylesheet' href='../css/main.css'/>
+ <title>Will Moyle - About Me</title>
+ </head>
+ 
+ <body>
+ 
+ <div id="header">
+ <h1 id="title">Will Moyle</h1>
+ <ul id="nav">
+ <li><a href="../index.html">Home</a></li>
+ <li class="current">About Me</li>
+ <li id="port_link"><a href="portfolio.html">Portfolio</a></li>
+ </ul>
+ <ul id="projects">
+ <li><a href="portfolio.html#mind">Mind Explorer iPad App</a></li>
+ <li><a href="portfolio.html#vr">Embodied Virtual Reality</a></li>
+ <li><a href="portfolio.html#blackjack">Blackjack Odds</a></li>
+ <li><a href="portfolio.html#monty">Monty Hall Problem</a></li>
+ </ul>
+ </div>
+ 
+ <div id="about">
+ 
+ <img class="odd_pic" src="../img/oxford.png"/>
+ 
+ <h2>UNDERGRADUATE STUDIES</h2>
+ 
+ <p>In 2012, I graduated from the <strong>University of Oxford</strong> after completing a four-year undergraduate Masters degree in <strong>Mathematics</strong>. The degree was split into two parts. The first three years, for which I achieved a <strong>First</strong>, covered a wide range of topics (with a focus on <strong>Probability and Statistics</strong>). During my final Masters year, I specialised in Mathematical Physiology and Geoscience and achieved a 2.1 classification.</p>
+ 
+ <hr>
+ 
+ <img class="even_pic" src="../img/london.jpg"/>
+ 
+ <h2>STARTING MY CAREER</h2>
+ 
+ <p>After graduating, I joined Deloitte LLP as a <strong>Strategy Consultant</strong>. There, I gained a strong appreciation for the way in which statistical <strong>analysis</strong> (which I performed largely in Excel) can inform business decisions and shape our clients&#39; growth strategies. My work also had a highly qualitative side, including performing <strong>market research</strong>, interviewing senior clients and industry specialists and then distilling this information into meaningful insights, which we would then <strong>communicate to clients</strong>. This would take the form both of written documents (mostly using PowerPoint) and verbal <strong>presentations</strong>. My projects covered industries such as Media, Public Sector and Health Care and taught me how to work effectively as part of a <strong>team</strong>, including <strong>managing</strong> more junior members.</p>
+ 
+ <hr>
+ 
+ <img class="odd_pic" src="../img/robot.jpg"/>
+ 
+ <h2>TRANSITIONING TO TECH</h2>
+ 
+ <p>In 2014, I decided to pursue a more technical career, so I left Deloitte in order to undertake an <strong>MSc Computing Science</strong> degree from <strong>Imperial College, London</strong>. This course was largely based upon the <strong>C++</strong> and <strong>Python</strong> programming languages and allowed me to explore a wide variety of technical areas, including:</p>
+ 
+ <ul>
+ <li><strong>Software Development</strong> and <strong>Object Oriented Programming</strong> (examples of some of the programs that I worked on can be found in my <a href="portfolio.html">Portfolio</a>)</li>
+ <li><strong>Databases</strong> - covering database design, SQL and Datalog</li>
+ <li><strong>Logic &amp; Artificial Intelligence</strong> - including natural language processing using Prolog</li>
+ <li><strong>Robotics</strong> - using Python to develop programs for a Lego Mindstorms and BrickPi robot (incorporating the SLAM localisation algorithm)</li>
+ </ul>
+ 
+ <hr>
+ 
+ <img class="even_pic" src="../img/ny.jpg"/>
+ 
+ <h2>NOW</h2>
+ 
+ <p>After achieving a high <strong>Distinction</strong> grade of 86% in my degree, I moved to New York along with my wife to begin a new chapter of my career, in which I hope to combine my technical, quantitative and qualitative skills in an exciting industry.</p>
+ 
+ 
+ </div>
+ 
+ <div id="footer">
+ <ul>
+ <li><a href="https://uk.linkedin.com/in/willmoyle" target="_blank">LINKEDIN</a></li>
+ <li><a href="https://github.com/willmoyle" target="_blank">GITHUB</a></li>
+ <li><a href="../resources/Will Moyle - Resume.pdf" target="_blank">RESUME</a></li>
+ </ul>
+ </div>
+ 
+ </body>
+ <script src="https://s3.amazonaws.com/codecademy-content/projects/jquery.min.js"></script>
+ <script src="../js/main.js"></script>
+ 
+ </html>-->
