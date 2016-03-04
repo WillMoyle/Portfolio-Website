@@ -5,6 +5,7 @@
 <html>
     
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
@@ -22,7 +23,7 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./about.html">About Me</a></li>
-                <li id="port_link"><i class="fa fa-chevron-right"></i><a href="./porfolio.html">   Portfolio</a></li>
+                <li id="port_link"><i class="fa fa-chevron-right"></i><a href="./portfolio.html">   Portfolio</a></li>
                 <ul class="project">
                     <li><a href="./portfolio.html#mind">Mind Explorer iPad App</a></li>
                     <li><a href="./portfolio.html#vr">Embodied Virtual Reality</a></li>
@@ -46,14 +47,16 @@
                 <i class="fa fa-bars"></i>
                 Menu
             </div>
-            <div class="center"><h1>Will Moyle</h1></div>
+            <div class="center"><a href="../index.html"><h1>Will Moyle</h1></a></div>
         </header>
         
-        <div class="container behind"></div>
+        
         
         <!-- MAIN BODY -->
         
-        <div class="blog_post" id="spoilers">
+        <div class="container behind divider" id="spoilers"></div>
+        
+        <div class="blog_post">
             <h2 class="blog_title">Movie Marketing - Spoiler Alert</h2>
             <h3 class="blog_date">Dec 9, 2015</h3>
             <p>This is the story of the greatest plot twist in cinema history.
@@ -104,16 +107,88 @@
             
         </div>
         
-        <hr>
+        <div class="divider" id="blackjack">
+            <hr>
+        </div>
         
-        <div class="blog_post" id="blackjack">
+        <div class="blog_post">
+            <h2 class="blog_title">Blackjack - The House (almost) Always Wins</h2>
+            <h3 class="blog_date">Dec 5, 2015</h3>
+            <p><strong>The house always wins.</strong></p>
+            <p>That's the first rule of gambling. It's the reason why one casino in Las Vegas made over half a billion dollars of profit in 2014 and why I have historically steered clear of the roulette table. However, is this always the case?</p>
+            <div class="blog_media">
+                <img src="../img/blackjack/roulette.jpg"/>
+            </div>
+            <p class="blog_caption">Such lovely smiles... what a fun way to eventually suffer the inevitable wrath of probability</p>
+            <p>A couple of weeks ago, I decided to look into my favourite way to lose money, Blackjack. I wrote a program using <strong>Python</strong> (which you can find on my <a href="https://github.com/WillMoyle/Blackjack">GitHub page</a>) that allowed me to automate the game and run a set number of simple strategies many times to analyse which (if any) would give me the <strong>best chance of leaving a casino with cash still in my pocket</strong>.</p>
+            <p>I'm not talking about counting cards in this case. Not many people can do that (I certainly can't) and it'll get you kicked out of the casino pretty quickly. It does make for <a href="http://www.imdb.com/title/tt0095953/">good</a> <a href="http://www.imdb.com/title/tt0478087/">movies</a>, though. For the sake of this project, I was looking for very simple strategies that should, eventually, leave a player with more money than they started with.</p>
+            <p>I'm not going to go into the rules in much detail (you can find a very good description <a href="http://www.pagat.com/banking/blackjack.html">here</a>) but the key points are these:</p>
+            <ul>
+                <li>The aim of the game is to beat the dealer by holding a hand of cards worth closer to 21 than the dealer but not over</li>
+                <li>Aces are worth one or eleven points</li>
+                <li>Jacks, Queens and Kings are worth ten points</li>
+                <li>All other cards are worth their number (e.g. three of clubs is worth three points)</li>
+                <li>Players start with two cards and can either choose to stand (settle for the total value of their hand) or hit (add a new card to their hand)</li>
+                <li>If the player's hand is worth 21 initially (with an ace and a card worth ten points) then the player has a 'blackjack' and will typically win back 1.5 times her initial bet</li>
+                <li>Once the player has stood or gone bust (i.e. has a hand worth over 21) then the dealer plays</li>
+                <li>The dealer is required to play by a given strategy</li>
+                <li>Depending on the casino, the dealer must either stand on a <em>Soft 17</em> (i.e. a hand worth 17 points with the ace counting as eleven, designated <em>s17</em>) or only stand when he reaches a <em>Hard 17</em> (i.e. a hand worth 17 points with the ace counting as one, designated <em>h17</em>)</li>
+            </ul>
+            <p>The last rule is a bit complicated, but makes a <strong>big</strong> difference (you can find more information <a href="http://www.readybetgo.com/blackjack/strategy/soft-17-rule-2496.html">here</a>).</p>
+            <div class="blog_media">
+                <img src="../img/blackjack/players.jpg"/>
+            </div>
+            <p class="blog_caption">Wow, these guys are smiling too, they clearly haven't had to listen to me explain the rules</p>
+            <p>There are many variations to the game, but these are the rules that I decided to model. The strategies that I implemented were relatively straight forward: the player hits until he reaches a given limit (from 12 up to 21, depending on the strategy). These, in turn, were modelled for either a hard limit or soft limit.</p>
+            <p>For example, given the limit of 15, I modelled four separate scenarios:</p>
+            <ul>
+                <li>Playing a game with <em>s17</em> rules, the player stands when she achieves a 15 including an ace counted as one (i.e. <em>Hard 15</em>, or <em>h15</em>)</li>
+                <li>Playing a game with <em>s17</em> rules, the player stands when she achieves a 15 including an ace counted as eleven (i.e. <em>Soft 15</em>, or <em>s15</em>)</li>
+                <li>Playing a game with <em>h17</em> rules, the player stands when she achieves a 15 including an ace counted as one (<em>h15</em>)</li>
+                <li>Playing a game with <em>h17</em> rules, the player stands when she achieves a 15 including an ace counted as eleven (<em>s15</em>)</li>
+            </ul>
+            <p>I simulated a total of <strong>4 million games</strong>, 1 million for each scenario, evenly spread for 10 limits from 12 to 21.</p>
+            <p>The <strong>percentage of wins never surpassed 46%</strong>. However, given that winning with a blackjack gives a 1.5 multiplier bonus, there were a few scenarios that meant that the player could leave the casino without being in debt to some nasty people. The formula for overall winnings is:</p>
+            <p class="blog_formula">WINNINGS = NUMBER_OF_GAMES * BET_PER_GAME * [PERCENTAGE_WINS - PERCENTAGE_LOSSES + PERCENTAGE_BLACKJACKS * (MULTIPLIER - 1) ]</p>
+            <p>The chart below shows expected winnings for the different strategies (after playing 100 games betting $10 per game)</p>
+            <div class="blog_media">
+                <img src="../img/blackjack/chart.png"/>
+            </div>
+            <p class="blog_caption">Notice there are a lot of negative numbers there!</p>
+            <p>As you can see, after putting <strong>$1000</strong> at risk, the best case scenario has the player expecting to leave with a <strong>grand total of $18</strong>... maybe enough for the cab ride home. Still, this experiment has at least allowed me to conclude the following:</p>
+            <ul>
+                <li>If the dealer must stand on <em>Hard 17</em> (<em>h17</em>), then the best simple strategy is to stand on a <strong>Soft 14</strong></li>
+                <li>If the dealer must stand on <em>Soft 17</em> (<em>s17</em>), then you'd be better off leaving the $1000 under the mattress, as you should <strong>expect to lose</strong> (although to minimise your loss, play <em>s15</em>, you'll only lose $12)</li>
+            </ul>
+            <p>I had a lot of fun with this, so I think I'm going to dig a little deeper, perhaps finding the best scenario that takes into account the number of decks being used or the dealer's face up card - so look out for that post in the near future.</p>
+            <p>Until then, gamble responsibly... or better yet, not at all - it's probably not worth it.</p>
             
         </div>
         
-        <hr>
+        <div class="divider" id="monty">
+            <hr>
+        </div>
         
-        <div class="blog_post" id="monty">
-            
+        <div class="blog_post">
+            <h2 class="blog_title">THE MONTY HALL PROBLEM (OR WHY GAME SHOW CONTESTANTS NEED PROBABILITY LESSONS)</h2>
+            <h3 class="blog_date">Nov 25, 2015</h3>
+            <p>Nearly every probability course will make some reference to the 'Monty Hall Problem'. This peculiar problem has been around for decades and illustrates the <strong>surprising, and often counter-intuitive, nature of probability</strong>. It's loosely based upon a game show called 'Let's Make a Deal' and named after the show's host.</p>
+            <p>The set-up is this: the player is presented with three doors. Behind one door is a prize - let's say, for the sake of argument, it's an Oculus Rift (the door is quite small). Behind the other two doors, there's something less exciting (maybe it's a Nintendo Virtual Boy). The player chooses a door. Without any other information, we can hopefully all agree that the odds of our player being pleased with what's behind the door is <strong>1 in 3</strong> (unless she's a particular fan of terrible 90's VR consoles).</p>
+            <p>Here's where things get interesting - the game show host opens one of the other two doors that doesn't hide our grand prize. The player then gets to choose whether to stick with her initial choice, or to open the other closed door. What should she do? The prize is behind one of two doors, so surely the odds are now <strong>50:50</strong> and it makes no difference which door she opens?</p>
+            <p>Clearly, by the way I phrased the question, the answer is no. She should always switch! In fact, she would have a <strong>2 in 3</strong> chance of getting the prize if she swaps to the other door.</p>
+            <p>I'm not going to get into the intricacies of probability here, there are a number of sources that'll explain things much better than I ever could (in fact there's a whole <a href="http://www.montyhallproblem.com/">website</a> dedicated to it). Our problem gets more complex when you consider a choice between N doors, in which the host opens P doors without the prize [1].</p>
+            <p>I was reintroduced to this problem in an excellent book that I'm reading (<a href="http://www.amazon.com/Naked-Statistics-Stripping-Dread-Data/dp/1480590185">Naked Statistics, by Charles Wheelan</a>) and it got me thinking about how I could simulate this problem for myself. As is so often the way, this lead to a sleepless night during which I planned out a program in my head that would allow a user to play this game manually themselves and also to run play the game automatically a large number of times, for different numbers of doors, to see if the formulas are correct (hint: they are, they were written by people much smarter than me).</p>
+            <p>You can find the program that I wrote on my <a href="https://github.com/WillMoyle/Monty-Hall-Problem">GitHub</a> page, but below are the results of my experiments:</p>
+            <p>As mentioned earlier, with 3 doors, the win rate when switching is 67%. As the number of doors increases (assuming the host still only opens one 'wrong' door), the win rate drops, but it's always higher than not switching.</p>
+            <div class="blog_media">
+                <img src="../img/monty/montychart1.png"/>
+            </div>
+            <p>Given a set number of doors, in this case 100, the win rate increases as the host opens more doors. If the host opens 98 of the remaining 99 doors, then you have a <strong>99%</strong> chance of winning if you switch.</p>
+            <div class="blog_media">
+                <img src="../img/monty/montychart2.png"/>
+            </div>
+            <p>So there you have it, probability is a tricky thing. Perhaps it's <strong>best not to trust your gut</strong>, especially when you have a computer around!</p>
+            <p class="blog_footnote">[1] By the way, for the maths geeks among you, the probability of winning after switching when you have N doors and the host opens P wrong doors is (N - 1) / [N * (N - P - 1)]. Selvin, Steve (August 1975b). "On the Monty Hall problem (letter to the editor)". American Statistician 29 (3): 134. JSTOR 2683443</p>
         </div>
         
         <!-- FOOTER -->

@@ -94,13 +94,18 @@ header .center {
     display: inline-block;
 }
 
-header h1 {
+header h1, header h1 a {
     margin: 0;
     margin-top: 0.5em;
     font-size: 1.5em;
     color: white;
     text-align: center;
-    
+    text-decoration: none;
+}
+
+header a:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .behind {
@@ -145,6 +150,10 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
+.divider {
+    height: 3em;
+}
+
 /* -------------------------------------------------------------------------- */
 /* ---------- BLOG ---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -156,6 +165,7 @@ hr {
 
 .blog_title {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .blog_date {
@@ -182,6 +192,26 @@ hr {
 
 .blog_media {
     text-align: center;
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+.blog_media img {
+    max-width: 100%;
+}
+
+.blog_formula {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.blog_footnote {
+    font-size: 85%;
+    font-style: italic;
 }
 
 
