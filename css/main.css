@@ -42,10 +42,16 @@ body {
     color: #CCCCCC;
 }
 
-.project li, .blog li {
+.project li {
     text-transform: none;
     padding-left: 50px;
 }
+
+.blog li {
+    text-transform: none;
+    padding-left: 50px;
+}
+
 
 .menu a {
     color: #fff;
