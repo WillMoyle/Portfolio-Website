@@ -169,6 +169,11 @@ hr {
     margin-left: 10%;
 }
 
+.blog_post p {
+    letter-spacing: 1px;
+    
+}
+
 .blog_title {
     text-align: center;
     text-transform: uppercase;
@@ -194,12 +199,32 @@ hr {
     font-size: 90%;
     color: #000000;
     text-align: center;
+    font-style: italic;
+    margin-bottom: 2em;
 }
 
 .blog_media {
     text-align: center;
     max-width: 80%;
     margin-left: 10%;
+    margin-top: 2em;
+}
+
+.blog_video {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.blog_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .blog_media img {
@@ -218,6 +243,13 @@ hr {
 .blog_footnote {
     font-size: 85%;
     font-style: italic;
+}
+
+.blog_section {
+    font-size: 120%;
+    font-weight: bolder;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
 }
 
 

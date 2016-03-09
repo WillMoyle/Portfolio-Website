@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <link rel='stylesheet' href='../css/main.css'/>
-        <title>Will Moyle</title>
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Will Moyle - Blog</title>
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,6 +23,7 @@
              ga('send', 'pageview');
             </script>
         <!-- End Google Analytics -->
+        
     </head>
     <body>
         
@@ -44,6 +46,7 @@
                 </ul>
                 <li id="blog_link"><i class="fa fa-chevron-right"></i><a href="./blog.html">   Blog</a></li>
                 <ul class="blog">
+                    <li><a href="./blog.html#web">Untangling the Web</a></li>
                     <li><a href="./blog.html#spoilers">Spoiler Alert! Movie Marketing</a></li>
                     <li><a href="./blog.html#blackjack">Blackjack Odds</a></li>
                     <li><a href="./blog.html#monty">Monty Hall</a></li>
@@ -65,7 +68,84 @@
         
         <!-- MAIN BODY -->
         
-        <div class="container behind divider" id="spoilers"></div>
+        <div class="container behind divider" id="web"></div>
+        
+        <div class="blog_post">
+            <h2 class="blog_title">Untangling the Web - Building My First Website</h2>
+            <h3 class="blog_date">March 9, 2016</h3>
+            
+            <p>The world of coding can sometimes seem so dense that taking a first step may seem impossible. What do I want to build? What languages does that mean I should learn? Where do I go to find out more?</p>
+            
+            <p>If your answer to the first question is 'websites' then this article is for you (which shouldn't come as a surprise, given the title). This isn't a web development tutorial - I'm afraid you won't be able to build the next Facebook by the end of this article - but my aim is to cover some of the basics, as well as the jargon, to clear away some of the fog surrounding this topic. If, in the next few minutes, you learn your JavaScript from your JQuery and your HTML from your CSS, then I'll have succeeded.</p>
+            
+            <p class="blog_section">Every journey...</p>
+
+            <p>Before learning to build websites, my coding experience was mostly focused on the so-called 'back-end' of software development. The languages that I had learned (such as C++ and Python) were very good at getting computers to do lots of smart calculations and clever tricks, but not so good at making anything visually appealing with a nice sleek user interface (UI). Due to this gap in my knowledge (as well as a bit of free time), I decided to teach myself some more 'front-end' languages and web development seemed like the obvious choice.</p>
+
+            <p>The number of sites that will allow you to build a website without any coding whatsoever is very large, with advantages and disadvantages to each. You can visit the excellent <a href="http://www.websitebuilderexpert.com" target="_blank">Website Builder Expert</a> to find out in depth about each one. If the thought of writing any code terrifies you (I can sympathise), then these are excellent choices.</p>
+
+            <p>I initially built this site (WillMoyle.org) using SquareSpace, which is a fantastic serivce - very intuitive and with some really smart features (and I'm not just saying that because SquareSpace seems to do a lot of sponsorships and this is my attempt to get on their radar). SquareSpace is in the middle of the price spectrum (<a href="https://www.squarespace.com/pricing" target="_blank">&pound;68 / $96 per year</a>), while builders with fewer features, such as GoDaddy, are priced in the region of <a href="https://www.godaddy.com/websites/website-builder" target="_blank">&pound;50 / $70 per year</a>.</p>
+
+            <p>For most of you, I'm sure that this is all the information necessary for your web development needs. However, to encourage you to stick around, I've added a very cute picture at the end of this post.</p>
+            
+            <p class="blog_section">Warning: Incoming Jargon</p>
+            
+            <p>You might, very reasonably, ask why anyone would bother learning to code websites if there are such good alternatives out there. It's a question I asked myself (frequently and, often, aloud) as I wrestled to rebuild this site with my own code. The simple answer is that nothing gives you the flexibility (or indeed the satisfaction) of building quite like coding yourself. I have very little experience with DIY (it's a miracle my occasional attempts have left me with all ten fingers), but I imagine it's the same as the difference between building a chair yourself and picking one up from Ikea.</p>
+            
+            <div class="blog_media">
+                <img src="../img/web/chair.png"/>
+            </div>
+            
+            <p class="blog_caption">A nice example of something I absolutely couldn't make</p>
+            
+            <p>So, what do you need to learn to build a basic website? At the core, there are two building blocks to pretty much every website:</p>
+            
+            <ul>
+                <li><strong>HTML</strong> (HyperText Markup Language): This language allows the coder to create the website's structure. You can set up headings, paragraphs, images, links and everything else that the website contains. You can find the HTML for this website <a href="https://github.com/WillMoyle/Portfolio-Website/blob/master/pages/blog.html" target="_blank">here</a>. If you've ever seen a website load incorrectly, with the right content but no nice style at all, then you've seen just the site's HTML. For example, below we have a little paragraph that also contains a link:
+                    <p class="blog_quote">&lt;p&gt;This is a sample paragraph with a link to &lt;a href="google.com" &gt; Google&lt;/a&gt;. Isn't that easy!&lt;/p&gt;</p>
+                </li>
+                <li><strong>CSS</strong> (Cascading Style Sheet): Now things can become pretty. This language, typically written in a separate file (such as <a href="https://github.com/WillMoyle/Portfolio-Website/blob/master/css/main.css" target="_blank">here</a>), allows the coder to change the position, size, color, font, margins, etc. of every element in the HTML code. Do you want every image to cover 80% of the page's width, with a nice thick red border and round edges? Simple:
+                    <p class="blog_quote">img {   width: 80%;   border: 5px solid red;   border-radius: 25px;   }</p>
+                </li>
+            </ul>
+
+            <div class="blog_media">
+                <img src="../img/web/calm.png"/>
+            </div>
+
+            <p class="blog_caption">Take a deep breath and stay calm, you're doing well!</p>
+            
+            <p class="blog_section">Let's Get Interactive</p>
+            
+            <p>We've already seen all the elements we need to build a nice, pretty static website - but, these days, users expect some level of interaction with a page. Whether it's an expanding menu (as you can see on the top left of this page) or a moving image gallery, there are literally thousands of additions that can be made to create a great user experience. I won't go into any great depth, but here are a few terms you may have heard:</p>
+            
+            <ul>
+                <li><strong>JavaScript</strong>: The most common language used for adding interaction.</li>
+                <li><strong>JQuery</strong>: An expansion of JavaScript that makes the language much more user friendly (used for <a href="https://github.com/WillMoyle/Portfolio-Website/blob/master/js/main.js" target="_blank">this site</a>)</li>
+                <li><strong>PHP</strong>: A server-side language, useful for providing a lot of information to the user more quickly than JavaScript</li>
+                <li><strong>Ruby on Rails</strong>: A great language for building web apps, used by sites such as Hulu and Twitter</li>
+            </ul>
+            
+            <p class="blog_section">Where to Learn</p>
+            
+            <p>There are thousands of ways of learning web development (seriously, <a href="http://www.amazon.com/s/ref=lp_5_nr_n_17?fst=as%3Aoff&rh=n%3A283155%2Cn%3A%211000%2Cn%3A5%2Cn%3A3510&bbn=5&ie=UTF8&qid=1457454181&rnid=5" target="_blank">Amazon has 37,000 books on the subject</a>). However, I'd recommend online resources. Not only are they often free, but they allow you to practice as you learn, which is absolutely vital. My recommendation is <a href="https://www.codecademy.com/" target="_blank">Codecademy.com</a>. The basic lessons are free (you can pay for extra projects and quizzes) and it is a fantastic place to learn.</p>
+            
+            <p class="blog_section">Nearly there...</p>
+            
+            <p>So you have a beautiful site that you've coded yourself. How do you get it online? The final step is to choose a web hosting site. I used <a href="https://www.siteground.com" target="_blank">SiteGround.com</a>, which allowed me to buy the domain name (i.e. WillMoyle.org) and to upload all of my files very simply (it's also fairly cheap - I pay $4 per month).</p>
+            
+            <p>That's all there is to it! Hopefully, the jargon hasn't put too many of you off and you now know a bit more about web development than you did a few minutes ago. As promised, here is your reward for getting this far:</p>
+            
+            <div class="blog_media">
+                <img src="../img/web/cute.png"/>
+            </div>
+
+
+        </div>
+        
+        <div class="divider" id="spoilers">
+            <hr>
+        </div>
         
         <div class="blog_post">
             <h2 class="blog_title">Movie Marketing - Spoiler Alert</h2>
@@ -75,7 +155,7 @@
             <p>Then came the tagline:</p>
             <p class="blog_quote">In the Year of Darkness, 2029, the rulers of this planet devised the ultimate plan. They would reshape the Future by changing the Past. The plan required something that felt no pity. No pain. No fear. Something unstoppable.</p>
             <p>The trailer, too, tapped into the zeitgeist of the mid-80's - technophobia was on the rise as the world took its first steps into the digital age, while interest in sci-fi was at an all time high due to the imminent release of the final (well, back then it was) Star Wars movie.</p>
-            <div class="blog_media">
+            <div class="blog_video">
                 <iframe width="420" height="300" align="middle" src="https://www.youtube.com/embed/lHz95RYUbik" frameborder="0" allowfullscreen></iframe>
             </div>
             <p class="blog_caption">The amazing hair also added to the appeal (and still does)</p>
@@ -89,29 +169,29 @@
             </div>
             <p>How incredible it must have been to be in the movie's initial screenings - with all your expectations and preconceptions subverted!</p>
             <p>Unless, of course, you happened to have been one of the millions to have seen the film's trailer:</p>
-            <div class="blog_media">
+            <div class="blog_video">
                 <iframe width="420" height="300" src="https://www.youtube.com/embed/eajuMYNYtuY" frameborder="0" allowfullscreen></iframe>
             </div>
             <p>The words <em>"once he was programmed to destroy the future, now his mission is to protect it"</em> might have given the audience a hint as to what's to come - significantly reducing, in my opinion, their enjoyment of the movie.</p>
             <p>I can only think of a few industries in which marketing plays such a great role and yet the more of it there is, the worse the consumer's enjoyment of the product will be.</p>
             <p>Take, for instance, the trailer for <em>Rocky</em>, which manages to essentially tell the entire story, including the ending.</p>
-            <div class="blog_media">
+            <div class="blog_video">
                 <iframe width="420" height="300" src="https://www.youtube.com/embed/7RYpJAUMo2M" frameborder="0" allowfullscreen></iframe>
             </div>
             <p class="blog_caption">Trailer is maybe the wrong word - maybe 'summary'</p>
             <p>At least the Terminator franchise leaned its lesson and began producing subtle, plot-light trailers that capture the essence of a film and raise excitement, without ruining expectations. It's not as though they gave away the movie's twists...</p>
-            <div class="blog_media">
+            <div class="blog_video">
                 <iframe width="420" height="300" src="https://www.youtube.com/embed/6GmLfivKQL8" frameborder="0" allowfullscreen></iframe>
             </div>
             <p class="blog_caption">Sam Worthington's robotic acting was deliberate (for this film at least)</p>
             <p>Twice more...</p>
-            <div class="blog_media">
+            <div class="blog_video">
                 <iframe width="420" height="300" src="https://www.youtube.com/embed/rGSxss7gWak" frameborder="0" allowfullscreen></iframe>
             </div>
             <p class="blog_caption">It takes a lot to make a plot twist more dumb than that title</p>
-            <p>I may be picking on the Terminator Franchise too much. After all, the trailer for 2012's <em><a href="https://www.youtube.com/watch?v=B8PVqw2jfrI">The Avengers</a></em> contains the final action shot of the movie, while, that same year, the marketing team for <em>The Amazing Spider-Man</em> released a grand total of <a href="http://www.slashfilm.com/watch-25minute-cut-the-amazing-spiderman-courtesy-sonys-marketing-materials/">25 minutes</a> of footage in various trailers and clips. Perhaps most infamously, the trailer for <em><a href="https://www.youtube.com/watch?v=PJvosb4UCLs">Cast Away</a></em> shows Tom Hanks reuniting with Helen Hunt after getting off that island!</p>
-            <p>With movie studios spending approximately the same amount on marketing a movie as they do on filming it, is it any wonder that trailers are releasing key twists and action moments to entice the paying public? After all, the filmmakers themselves have relatively little power over what the marketing team release (<a href="http://www.theguardian.com/film/2015/jul/01/terminator-genisys-director-had-unpleasant-talks-over-trailer-spoilers">as seen with director Alan Taylor's anger at the Terminator Genisys trailer</a>).</p>
-            <p>In this era of multi-billion dollar franchises, in which sequels are green-lit before the original is even released (not a smart move, <em><a href="http://www.wired.co.uk/news/archive/2015-11/24/fantastic-four-sequel-cancelled">Fantastic Four</a></em>), getting bums on seats has never been more vital. We live in a world in which we are endlessly bombarded with movie trailers and posters (try <strong>not</strong> watching a Star Wars trailer at the moment - trust me, it's not possible). Even though they risk spoiling the very product that they are trying to sell us, studios will do everything they can to get us into theatres (where we can also bankrupt ourselves at the concessions stand - $8 for a tiny bottle of water New York, seriously!?).</p>
+            <p>I may be picking on the Terminator Franchise too much. After all, the trailer for 2012's <em><a href="https://www.youtube.com/watch?v=B8PVqw2jfrI" target="_blank">The Avengers</a></em> contains the final action shot of the movie, while, that same year, the marketing team for <em>The Amazing Spider-Man</em> released a grand total of <a href="http://www.slashfilm.com/watch-25minute-cut-the-amazing-spiderman-courtesy-sonys-marketing-materials/" target="_blank">25 minutes</a> of footage in various trailers and clips. Perhaps most infamously, the trailer for <em><a href="https://www.youtube.com/watch?v=PJvosb4UCLs" target="_blank">Cast Away</a></em> shows Tom Hanks reuniting with Helen Hunt after getting off that island!</p>
+            <p>With movie studios spending approximately the same amount on marketing a movie as they do on filming it, is it any wonder that trailers are releasing key twists and action moments to entice the paying public? After all, the filmmakers themselves have relatively little power over what the marketing team release (<a href="http://www.theguardian.com/film/2015/jul/01/terminator-genisys-director-had-unpleasant-talks-over-trailer-spoilers" target="_blank">as seen with director Alan Taylor's anger at the Terminator Genisys trailer</a>).</p>
+            <p>In this era of multi-billion dollar franchises, in which sequels are green-lit before the original is even released (not a smart move, <em><a href="http://www.wired.co.uk/news/archive/2015-11/24/fantastic-four-sequel-cancelled" target="_blank">Fantastic Four</a></em>), getting bums on seats has never been more vital. We live in a world in which we are endlessly bombarded with movie trailers and posters (try <strong>not</strong> watching a Star Wars trailer at the moment - trust me, it's not possible). Even though they risk spoiling the very product that they are trying to sell us, studios will do everything they can to get us into theatres (where we can also bankrupt ourselves at the concessions stand - $8 for a tiny bottle of water New York, seriously!?).</p>
             <p>Sadly this strategy works, and until the audience starts voting with its feet and seeking out films that offer an element of mystery and intrigue (such as the work of Christopher Nolan), nothing will change. If only Terminator 2 had given audiences a bit of credit, the greatest plot revelation in cinema history would be remembered as such.</p>
             <p>... Although maybe the best plot twist ever actually involves Darth Vader's relationship with Luke Skywalker - what do I know?</p>
             
@@ -131,9 +211,9 @@
                 <img src="../img/blackjack/roulette.jpg"/>
             </div>
             <p class="blog_caption">Such lovely smiles... what a fun way to eventually suffer the inevitable wrath of probability</p>
-            <p>A couple of weeks ago, I decided to look into my favourite way to lose money, Blackjack. I wrote a program using <strong>Python</strong> (which you can find on my <a href="https://github.com/WillMoyle/Blackjack">GitHub page</a>) that allowed me to automate the game and run a set number of simple strategies many times to analyse which (if any) would give me the <strong>best chance of leaving a casino with cash still in my pocket</strong>.</p>
-            <p>I'm not talking about counting cards in this case. Not many people can do that (I certainly can't) and it'll get you kicked out of the casino pretty quickly. It does make for <a href="http://www.imdb.com/title/tt0095953/">good</a> <a href="http://www.imdb.com/title/tt0478087/">movies</a>, though. For the sake of this project, I was looking for very simple strategies that should, eventually, leave a player with more money than they started with.</p>
-            <p>I'm not going to go into the rules in much detail (you can find a very good description <a href="http://www.pagat.com/banking/blackjack.html">here</a>) but the key points are these:</p>
+            <p>A couple of weeks ago, I decided to look into my favourite way to lose money, Blackjack. I wrote a program using <strong>Python</strong> (which you can find on my <a href="https://github.com/WillMoyle/Blackjack" target="_blank">GitHub page</a>) that allowed me to automate the game and run a set number of simple strategies many times to analyse which (if any) would give me the <strong>best chance of leaving a casino with cash still in my pocket</strong>.</p>
+            <p>I'm not talking about counting cards in this case. Not many people can do that (I certainly can't) and it'll get you kicked out of the casino pretty quickly. It does make for <a href="http://www.imdb.com/title/tt0095953/" target="_blank">good</a> <a href="http://www.imdb.com/title/tt0478087/" target="_blank">movies</a>, though. For the sake of this project, I was looking for very simple strategies that should, eventually, leave a player with more money than they started with.</p>
+            <p>I'm not going to go into the rules in much detail (you can find a very good description <a href="http://www.pagat.com/banking/blackjack.html" target="_blank">here</a>) but the key points are these:</p>
             <ul>
                 <li>The aim of the game is to beat the dealer by holding a hand of cards worth closer to 21 than the dealer but not over</li>
                 <li>Aces are worth one or eleven points</li>
@@ -145,7 +225,7 @@
                 <li>The dealer is required to play by a given strategy</li>
                 <li>Depending on the casino, the dealer must either stand on a <em>Soft 17</em> (i.e. a hand worth 17 points with the ace counting as eleven, designated <em>s17</em>) or only stand when he reaches a <em>Hard 17</em> (i.e. a hand worth 17 points with the ace counting as one, designated <em>h17</em>)</li>
             </ul>
-            <p>The last rule is a bit complicated, but makes a <strong>big</strong> difference (you can find more information <a href="http://www.readybetgo.com/blackjack/strategy/soft-17-rule-2496.html">here</a>).</p>
+            <p>The last rule is a bit complicated, but makes a <strong>big</strong> difference (you can find more information <a href="http://www.readybetgo.com/blackjack/strategy/soft-17-rule-2496.html" target="_blank">here</a>).</p>
             <div class="blog_media">
                 <img src="../img/blackjack/players.jpg"/>
             </div>
@@ -187,9 +267,9 @@
             <p>The set-up is this: the player is presented with three doors. Behind one door is a prize - let's say, for the sake of argument, it's an Oculus Rift (the door is quite small). Behind the other two doors, there's something less exciting (maybe it's a Nintendo Virtual Boy). The player chooses a door. Without any other information, we can hopefully all agree that the odds of our player being pleased with what's behind the door is <strong>1 in 3</strong> (unless she's a particular fan of terrible 90's VR consoles).</p>
             <p>Here's where things get interesting - the game show host opens one of the other two doors that doesn't hide our grand prize. The player then gets to choose whether to stick with her initial choice, or to open the other closed door. What should she do? The prize is behind one of two doors, so surely the odds are now <strong>50:50</strong> and it makes no difference which door she opens?</p>
             <p>Clearly, by the way I phrased the question, the answer is no. She should always switch! In fact, she would have a <strong>2 in 3</strong> chance of getting the prize if she swaps to the other door.</p>
-            <p>I'm not going to get into the intricacies of probability here, there are a number of sources that'll explain things much better than I ever could (in fact there's a whole <a href="http://www.montyhallproblem.com/">website</a> dedicated to it). Our problem gets more complex when you consider a choice between N doors, in which the host opens P doors without the prize [1].</p>
-            <p>I was reintroduced to this problem in an excellent book that I'm reading (<a href="http://www.amazon.com/Naked-Statistics-Stripping-Dread-Data/dp/1480590185">Naked Statistics, by Charles Wheelan</a>) and it got me thinking about how I could simulate this problem for myself. As is so often the way, this lead to a sleepless night during which I planned out a program in my head that would allow a user to play this game manually themselves and also to run play the game automatically a large number of times, for different numbers of doors, to see if the formulas are correct (hint: they are, they were written by people much smarter than me).</p>
-            <p>You can find the program that I wrote on my <a href="https://github.com/WillMoyle/Monty-Hall-Problem">GitHub</a> page, but below are the results of my experiments:</p>
+            <p>I'm not going to get into the intricacies of probability here, there are a number of sources that'll explain things much better than I ever could (in fact there's a whole <a href="http://www.montyhallproblem.com/" target="_blank">website</a> dedicated to it). Our problem gets more complex when you consider a choice between N doors, in which the host opens P doors without the prize [1].</p>
+            <p>I was reintroduced to this problem in an excellent book that I'm reading (<a href="http://www.amazon.com/Naked-Statistics-Stripping-Dread-Data/dp/1480590185" target="_blank">Naked Statistics, by Charles Wheelan</a>) and it got me thinking about how I could simulate this problem for myself. As is so often the way, this lead to a sleepless night during which I planned out a program in my head that would allow a user to play this game manually themselves and also to run play the game automatically a large number of times, for different numbers of doors, to see if the formulas are correct (hint: they are, they were written by people much smarter than me).</p>
+            <p>You can find the program that I wrote on my <a href="https://github.com/WillMoyle/Monty-Hall-Problem" target="_blank">GitHub</a> page, but below are the results of my experiments:</p>
             <p>As mentioned earlier, with 3 doors, the win rate when switching is 67%. As the number of doors increases (assuming the host still only opens one 'wrong' door), the win rate drops, but it's always higher than not switching.</p>
             <div class="blog_media">
                 <img src="../img/monty/montychart1.png"/>
